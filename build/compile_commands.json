@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/workspace/build",
-  "command": "/usr/bin/avr-gcc   -mmcu=atmega8 -DF_CPU=16000000UL -Os -Wall -g -o CMakeFiles/firmware.elf.dir/main.c.obj -c /workspace/main.c",
-  "file": "/workspace/main.c"
-}
-]
