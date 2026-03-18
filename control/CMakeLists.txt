@@ -7,7 +7,7 @@ set(CMAKE_OBJCOPY avr-objcopy)
 set(CMAKE_SIZE avr-size)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-project(blinky C CXX)
+project(control C CXX)
 
 set(MCU atmega8)
 
