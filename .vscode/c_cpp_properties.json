@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "AVR",
+            "compilerPath": "/usr/bin/avr-gcc",
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "/usr/lib/avr/include",
+                "/usr/lib/gcc/avr/5.4.0/include",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "DEBUG",
+                "F_CPU=16000000UL"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "browse": {
+                "path": [
+                    "/usr/lib/avr/include",
+                    "${workspaceFolder}"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}

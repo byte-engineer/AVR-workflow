@@ -1,0 +1,25 @@
+{"build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+				"ms-vscode.cpptools"
+			],
+      "settings": {
+        "C_Cpp.default.includePath": [
+          "/usr/lib/gcc/avr/5.4.0/include",
+          "/usr/lib/gcc/avr/*/include",
+          "/usr/lib/gcc/avr/**"
+        ],
+        "C_Cpp.default.compilerPath": "/usr/bin/avr-gcc",
+        "C_Cpp.default.cStandard": "c11",
+        "C_Cpp.default.intelliSenseMode": "gcc-x64"
+      }
+    }
+  },
+  "runArgs": [
+        "--rm",
+        "-it"
+    ]
+}
