@@ -1,7 +1,7 @@
 {
     "name": "AVR Dev",
     "dockerFile": "Dockerfile",
-    "workspaceFolder": "/workspace",
+    "workspaceFolder": "/workspace/blinky",
     "extensions": [
         "ms-vscode.cpptools",
         "ms-vscode.cmake-tools"
@@ -10,7 +10,6 @@
         "C_Cpp.intelliSenseEngine": "Default",
         "C_Cpp.intelliSenseEngineFallback": "Enabled"
     },
-    "postCreateCommand": "mkdir -p build && cmake -B build",
     "remoteUser": "root",
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"

@@ -15,7 +15,6 @@
                 "__AVR_ATmega8__",
                 "MCU=atmega8"
             ],
-            "compilerPathInCppPropertiesJson": "/usr/bin/gcc",
             "mergeConfigurations": false,
             "recursiveIncludes": {},
             "browse": {
@@ -25,12 +24,9 @@
         {
             "name": "AVR_inte",
             "compileCommands": [
-                "/workspace/build/compile_commands.json"
-            ],
-            "intelliSenseMode": "gcc-x64",
-            "compileCommandsInCppPropertiesJson": [
                 "${workspaceFolder}/build/compile_commands.json"
             ],
+            "intelliSenseMode": "gcc-x64",
             "mergeConfigurations": false,
             "recursiveIncludes": {},
             "browse": {
