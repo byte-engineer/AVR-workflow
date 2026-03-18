@@ -12,8 +12,8 @@ project(AVR_Project C CXX)
 set(MCU atmega8)
 set(F_CPU 16000000UL)
 
-set(CMAKE_C_FLAGS "-mmcu=${MCU} -DF_CPU=${F_CPU} -Os -Wall")
-set(CMAKE_CXX_FLAGS "-mmcu=${MCU} -DF_CPU=${F_CPU} -Os -Wall")
+set(CMAKE_C_FLAGS "-mmcu=${MCU} -DF_CPU=${F_CPU} -Os -Wall --save-temps")
+set(CMAKE_CXX_FLAGS "-mmcu=${MCU} -DF_CPU=${F_CPU} -Os -Wall --save-temps")
 set(CMAKE_EXE_LINKER_FLAGS "-mmcu=${MCU}")
 
 # Collect all source files
