@@ -1,25 +1,18 @@
-{"build": {
-    "dockerfile": "Dockerfile"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-				"ms-vscode.cpptools"
-			],
-      "settings": {
-        "C_Cpp.default.includePath": [
-          "/usr/lib/gcc/avr/5.4.0/include",
-          "/usr/lib/gcc/avr/*/include",
-          "/usr/lib/gcc/avr/**"
-        ],
-        "C_Cpp.default.compilerPath": "/usr/bin/avr-gcc",
-        "C_Cpp.default.cStandard": "c11",
-        "C_Cpp.default.intelliSenseMode": "gcc-x64"
-      }
-    }
-  },
-  "runArgs": [
-        "--rm",
-        "-it"
+{
+    "name": "AVR Dev",
+    "dockerFile": "Dockerfile",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+    ],
+    "settings": {
+        "C_Cpp.intelliSenseEngine": "Default",
+        "C_Cpp.intelliSenseEngineFallback": "Enabled"
+    },
+    "postCreateCommand": "mkdir -p build && cmake -B build",
+    "remoteUser": "root",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
     ]
 }

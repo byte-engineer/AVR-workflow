@@ -1,0 +1,1 @@
+/usr/bin/avr-gcc -mmcu=atmega8 -DF_CPU=16000000UL -Os -Wall -g -mmcu=atmega8 CMakeFiles/firmware.elf.dir/main.c.obj -o firmware.elf 

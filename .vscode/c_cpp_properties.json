@@ -5,22 +5,38 @@
             "compilerPath": "/usr/bin/avr-gcc",
             "intelliSenseMode": "gcc-x64",
             "includePath": [
+                "/workspace/**",
                 "/usr/lib/avr/include",
-                "/usr/lib/gcc/avr/5.4.0/include",
-                "${workspaceFolder}/**"
+                "/usr/lib/avr/include/avr/*",
+                "/usr/lib/gcc/avr/**"
             ],
             "defines": [
-                "DEBUG",
-                "F_CPU=16000000UL"
+                "F_CPU=16000000UL",
+                "__AVR_ATmega8__",
+                "MCU=atmega8"
             ],
-            "cStandard": "c11",
-            "cppStandard": "c++11",
+            "compilerPathInCppPropertiesJson": "/usr/bin/gcc",
+            "mergeConfigurations": false,
+            "recursiveIncludes": {},
             "browse": {
-                "path": [
-                    "/usr/lib/avr/include",
-                    "${workspaceFolder}"
-                ]
+                "limitSymbolsToIncludedHeaders": true
             }
+        },
+        {
+            "name": "AVR_inte",
+            "compileCommands": [
+                "/workspace/build/compile_commands.json"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "compileCommandsInCppPropertiesJson": [
+                "${workspaceFolder}/build/compile_commands.json"
+            ],
+            "mergeConfigurations": false,
+            "recursiveIncludes": {},
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "cStandard": "c11"
         }
     ],
     "version": 4

@@ -1,13 +1,18 @@
-FROM gcc:4.9
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
-    gcc-avr \
+    build-essential \
+    cmake \
+    git \
     avr-libc \
+    gcc-avr \
     avrdude \
     make \
-    git \
+    cmake \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
+# Set working dir
 WORKDIR /workspace
-
-COPY . .
