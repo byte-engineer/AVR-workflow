@@ -1,7 +1,7 @@
 {
     "name": "AVR Dev",
     "dockerFile": "Dockerfile",
-    "workspaceFolder": "/workspace/control",
+    "workspaceFolder": "/workspace/blinky",
     "extensions": [
         "ms-vscode.cpptools",
         "ms-vscode.cmake-tools"
