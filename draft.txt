@@ -1,0 +1,16 @@
+
+- - - - - - - - - - - - - - - - - - - - - -
+- install usbipd through winget
+- Find BUSID through `usbipd list` admin command
+- usbipd bind --busid <BUSID> (Only need to do this once).
+- run `usbipd attach --wsl --busid <BUSID>` every time you connect the port.
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+lsusb            # view attached usd ports
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+SQUino Spec
+boud rate is 38400
+avrdude.exe -c arduino -p m8 -P COM4 -b 38400 -U flash:w:firmware.hex:i

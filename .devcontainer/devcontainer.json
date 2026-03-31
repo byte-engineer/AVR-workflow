@@ -19,6 +19,10 @@
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
     ],
-    "remoteUser": "root",
-    "postCreateCommand": "cmake -B build -S . && cd build && make"
+    "postCreateCommand": "cmake -B build -S .",
+    "runArgs": [
+        "--device=/dev/bus/usb:/dev/bus/usb",
+        "--privileged"
+    ],
+    "remoteUser": "root"
 }
