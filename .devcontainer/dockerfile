@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     gcc-avr \
     avrdude \
     make \
-    cmake \
     vim \
     && rm -rf /var/lib/apt/lists/*
 

@@ -1,17 +1,24 @@
 {
     "name": "AVR Dev",
-    "dockerFile": "Dockerfile",
-    "workspaceFolder": "/workspace/blinky",
-    "extensions": [
-        "ms-vscode.cpptools",
-        "ms-vscode.cmake-tools"
-    ],
-    "settings": {
-        "C_Cpp.intelliSenseEngine": "Default",
-        "C_Cpp.intelliSenseEngineFallback": "Enabled"
+    "build": {
+        "dockerfile": "Dockerfile"
     },
-    "remoteUser": "root",
+    "workspaceFolder": "/workspace/blinky",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools"
+            ],
+            "settings": {
+                "C_Cpp.intelliSenseEngine": "default",
+                "C_Cpp.intelliSenseEngineFallback": "Enabled"
+            }
+        }
+    },
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-    ]
+    ],
+    "remoteUser": "root",
+    "postCreateCommand": "cmake -B build -S . && cd build && make"
 }
